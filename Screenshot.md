@@ -1,11 +1,15 @@
 <h1>Bloodbank Management System</h1>
+<br/>
+
+It contains the following interesting pages:<br/>
 
 <ul>
 <li>
   <b>Home Page</b>
 
   
-  ![home](https://user-images.githubusercontent.com/24903839/33645607-8dad5cd6-da00-11e7-9d75-e94f41b818b7.png)
+  ![home](https://user-images.githubusercontent.com/24903839/33646313-be6abfe6-da03-11e7-8b0f-fc6cf6e7e017.png)
+
   
 </li>
   
