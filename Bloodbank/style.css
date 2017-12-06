@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:300,400,500|Days+One|El+Messiri:400,500,600|Flamenco|Lobster|Megrim|Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Lobster');
+
+html{
+    background: #ddd;
+}
+
+body{
+    width:1000px;
+    margin: 30px auto;
+    background: white;
+    box-shadow: 0 0 10px black;
+    padding-bottom: 100px;
+}
+
+main{
+    margin: 0 5%;
+}
+
+.index{
+    padding: 90px 0;
+}
+
+h1{
+    font-family: "Lobster";
+    font-size: 3em;
+    color: red;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+h3{
+    font-family: "Flamenco";
+    font-size: 2em;
+}
+
+ul{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+}
+
+ul a{
+    width: 16.1666%;
+    text-decoration: none;
+    color: white;
+    background: red;
+    text-align: center;
+    margin: 0 0.25%;
+    font-family: "Inconsolata";
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 2px 0;
+}
+
+
+form div{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+form label{
+    font-family: "Inconsolata";
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1;
+}
+
+.col1 form div *{
+    flex-basis: 48%;
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.col1{
+    width: 35%;
+}
+
+.col2{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ref{
+    text-decoration: none;
+    color: white;
+    background: red;
+    text-align: center;
+    margin: 2% 0.25%;
+    font-family: "Inconsolata";
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 2px 0;
+}
+
+.search-col1{
+    width: 50%;
+    margin: 50px ;
+}
+
+.search-col1 form{
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-col2{
+    text-align: right;
+    margin-right: 50px;
+}
+
+table{
+    margin: 2% 10%;
+}
+
+table, tr, th, td{
+	border: 1px solid black;
+}
+
+.hidden{
+	display: none;
+}
+
+.expanded{
+	display: block;
+}
+
+.hide{
+	display: none;
+}
+
+.order-issue{
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-issue p{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
