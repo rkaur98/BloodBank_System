@@ -34,7 +34,7 @@
 ?> -->
 
 <?php
-$host = 'nutritionbox.database.windows.net';
+$host = 'tcp:nutritionbox.database.windows.net,1433';
 $username = 'rupkaur98';
 $password = 'rk@6904$';
 $db_name = 'NutritionBox';
