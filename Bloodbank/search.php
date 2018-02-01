@@ -124,7 +124,7 @@
 		    $key = "";
 
 		    
-		    $result = mysqli_query($conn,$sql);
+		    $result = $conn->query($sql);
 
 		    if ($result->num_rows > 0) {
 			    $i = 0;
@@ -160,7 +160,7 @@
 		    $key = $_POST['key'];
 
 		    
-		    $result = mysqli_query($conn,$sql);
+		    $result = $conn->query($sql);
 
 		    if ($result->num_rows > 0) {
 			    $i = 0;
@@ -180,7 +180,7 @@
 
 		if(isset($_POST['delete'])){
 				$sql1 = "DELETE FROM donor WHERE DID = ".$_POST["did"]."";
-				$result1 = mysqli_query($conn,$sql1);
+				$result1 = $conn->query($sql1);
 
 			if($_POST['bfilter']=="B_Type"){
 				$sql = "SELECT DISTINCT donor.DID, donor.D_Name, donor.D_Age, donor.D_Address, donor.D_Phone, donor.D_Sex, blood.B_Type from donor inner join blood on donor.DID = blood.DID WHERE B_Type = '".$_POST["bkey"]."'";
@@ -200,7 +200,7 @@
 		    $key = $_POST['bkey'];
 
 		    
-		    $result = mysqli_query($conn,$sql);
+		    $result = $conn->query($sql);
 
 		    if ($result->num_rows > 0) {
 			    $i = 0;
@@ -217,7 +217,7 @@
 
 		if(isset($_POST['update'])){
 				$sql1 = "UPDATE donor SET D_Name = '".$_POST["dname"]."', D_Age = '".$_POST["dage"]."', D_Address = '".$_POST["daddress"]."', D_Phone = '".$_POST["dphone"]."',  D_Sex = '".$_POST["dsex"]."'  WHERE DID = ".$_POST["did"]."";
-				$result1 = mysqli_query($conn,$sql1);
+				$result1 = $conn->query($sql1);
 
 			if($_POST['bfilter']=="B_Type"){
 				$sql = "SELECT DISTINCT donor.DID, donor.D_Name, donor.D_Age, donor.D_Address, donor.D_Phone, donor.D_Sex, blood.B_Type from donor inner join blood on donor.DID = blood.DID WHERE B_Type = '".$_POST["bkey"]."'";
@@ -237,7 +237,7 @@
 		    $key = $_POST['bkey'];
 
 		    
-		    $result = mysqli_query($conn,$sql);
+		    $result = $conn->query($sql);
 
 		    if ($result->num_rows > 0) {
 			    $i = 0;
