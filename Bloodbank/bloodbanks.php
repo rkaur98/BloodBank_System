@@ -48,7 +48,7 @@
 	<?php
 
 	
-	    $sql = "SELECT BNO, B_Name, B_Address, B_Phone FROM bloodbank ";
+	    $sql = "SELECT BNO, B_Name, B_Address, B_Phone FROM Bloodbank ";
 	   
 	    $result = $conn->query($sql);
             echo $result;
