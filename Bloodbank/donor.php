@@ -134,11 +134,12 @@
 	    $sql = "INSERT INTO donor (D_Name, D_Age, D_Address, D_Phone, D_Sex)
 	    VALUES ('".$_POST["dname"]."','".$_POST["dage"]."','".$_POST["daddress"]."','".$_POST["dphone"]."','".$_POST["dsex"]."')";
 
-	    $result = mysqli_query($conn,$sql);
+	    $result = $conn->query($sql);
+		  
 	    echo "Donor Registered";
 
 	    $sql1 = "SELECT MAX(DID) FROM donor";
-	    $result1 = mysqli_query($conn,$sql1);
+	    $result1 = $conn->query($sql1);
 	    $row = mysqli_fetch_row($result1);
 	    echo $row[0];
 
@@ -146,11 +147,11 @@
 	    VALUES ('".$_POST["btype"]."','".$_POST["bvol"]."','".$row[0]."')";
 
 	    
-	    $result2 = mysqli_query($conn,$sql2);
+	    $result2 = $conn->query($sql2);
 
 
 	    $sql3 = "UPDATE bloodstored SET Vol = Vol + '".$_POST["bvol"]."' WHERE B_Type = '".$_POST["btype"]."' ";
-	    $result3 = mysqli_query($conn,$sql3);
+	    $result3 = $conn->query($sql3);
 
 		}
 
