@@ -50,7 +50,7 @@
 	
 	    $sql = "SELECT BNO, B_Name, B_Address, B_Phone FROM Bloodbank ";
 	   
-	    $result = $conn->query($sql);
+	    $result = mysqli_query($conn, $sql);
             echo $result;
 	    
 
