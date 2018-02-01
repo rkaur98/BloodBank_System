@@ -49,7 +49,7 @@
 
 	    $sql = "SELECT B_Type, Vol FROM bloodstored WHERE BNO='205' ";
 
-	    $result = mysqli_query($conn,$sql);
+	    $result = $conn->query($sql);
 
 	    
 
