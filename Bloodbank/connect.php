@@ -1,3 +1,24 @@
+<?php
+$serverName = "nutritionbox.database.windows.net";
+$connectionOptions = array(
+    "Database" => "NutritionBox",
+    "Uid" => "rupkaur98",
+    "PWD" => "rk@6904$"
+);
+//Establishes the connection
+$conn = sqlsrv_connect($serverName, $connectionOptions);
+$tsql= "SELECT *
+        FROM Bloodbank";
+$getResults= sqlsrv_query($conn, $tsql);
+echo ("Reading data from table" . PHP_EOL);
+if ($getResults == FALSE)
+    echo (sqlsrv_errors());
+while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+ echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
+}
+sqlsrv_free_stmt($getResults);
+?>
+
 <!-- <?php
 
 // PHP Data Objects(PDO) Sample Code:
@@ -33,32 +54,3 @@
 
 ?> -->
 
-<?php
-$host = 'tcp:nutritionbox.database.windows.net,1433';
-$username = 'rupkaur98';
-$password = 'rk@6904$';
-$db_name = 'NutritionBox';
-
-//Establishes the connection
-$conn = mysqli_init();
-mysqli_real_connect($conn, $host, $username, $password, $db_name);
-if (mysqli_connect_errno($conn)) {
-die('Failed to connect to MySQL: '.mysqli_connect_error());
-}
-
-// Run the create table query
-if (mysqli_query($conn, '
-CREATE TABLE Products (
-`Id` INT NOT NULL AUTO_INCREMENT ,
-`ProductName` VARCHAR(200) NOT NULL ,
-`Color` VARCHAR(50) NOT NULL ,
-`Price` DOUBLE NOT NULL ,
-PRIMARY KEY (`Id`)
-);
-')) {
-printf("Table created\n");
-}
-
-//Close the connection
-mysqli_close($conn);
-?>
