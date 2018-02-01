@@ -140,7 +140,7 @@
 
 	    $sql1 = "SELECT MAX(DID) FROM donor";
 	    $result1 = $conn->query($sql1);
-	    $row = mysqli_fetch_row($result1);
+	    $row = $result1->fetch_row();
 	    echo $row[0];
 
 	    $sql2 = "INSERT INTO blood (B_Type, Vol, DID)
