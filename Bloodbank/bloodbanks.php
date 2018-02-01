@@ -47,7 +47,7 @@
 	  </tr>
 	<?php
 
-	
+	echo 'Hello';
 
 	    $sql = "SELECT BNO, B_Name, B_Address, B_Phone FROM bloodbank ";
 
