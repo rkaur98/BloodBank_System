@@ -14,7 +14,7 @@
 // $connectionInfo = array("UID" => "rupkaur98@nutritionbox", "pwd" => "rk@6904$", "Database" => "NutritionBox", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 // $serverName = "tcp:nutritionbox.database.windows.net,1433";
 
-$conn = mysqli_connect("tcp:nutritionbox.database.windows.net,1433", "rupkaur98@nutritionbox", "rk@6904$", "NutritionBox");
+$conn = mysqli_connect("nutritionbox.database.windows.net", "rupkaur98@nutritionbox", "rk@6904$", "NutritionBox");
 
 $sql = "SELECT BNO, B_Name, B_Address, B_Phone FROM Bloodbank ";
 	   
