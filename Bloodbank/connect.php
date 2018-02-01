@@ -15,5 +15,19 @@ $connectionInfo = array("UID" => "rupkaur98@nutritionbox", "pwd" => "rk@6904$", 
 $serverName = "tcp:nutritionbox.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+$sql = "SELECT BNO, B_Name, B_Address, B_Phone FROM Bloodbank ";
+	   
+	    $result = mysqli_query($conn, $sql);
+            echo $result;
+	    
+	    if ($result->num_rows > 0) {
+    
+		    while($row = $result->fetch_assoc()) {
+		        echo "<tr><td>" . $row["BNO"]. "</td><td>" . $row["B_Name"]. "</td><td>" . $row["B_Address"]. "</td><td>" . $row["B_Phone"]. "</td></tr> ";
+		    }
+		} else {
+		    echo "0 results";
+		}
+
 
 ?>
