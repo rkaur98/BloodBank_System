@@ -2,8 +2,8 @@
 $serverName = "nutritionbox.database.windows.net";
 $connectionOptions = array(
     "Database" => "NutritionBox",
-    "Uid" => "rupkaur98",
-    "PWD" => "rk@6904$"
+    "Uid" => "user",
+    "PWD" => "pwd"
 );
 //Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
